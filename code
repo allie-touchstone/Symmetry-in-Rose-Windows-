@@ -1,0 +1,1808 @@
+\documentclass{beamer}
+\usetheme{Warsaw}
+\usepackage{animate}
+\usepackage{graphicx}
+\usepackage{multicol}
+\graphicspath{ {./images/} }
+
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+% setting the color
+\definecolor{mypurple}{RGB}{88,44,131}
+\setbeamercolor*{palette primary}{use=structure,fg=white,bg=mypurple}
+
+% text at the bottom of the slides
+\title{Symmetries of Rose Windows}
+\author{Allie Touchstone}
+% title slide
+\date{\today}
+ 
+\begin{document}
+ 
+\begin{frame}
+   \titlepage
+\end{frame}
+
+\begin{frame}
+\frametitle{Table of Contents}
+\tableofcontents
+\end{frame}
+
+\begin{frame}{Preview of Topics }
+
+% table of contents 
+\begin{itemize}
+    \item Vertices, Edges, Paths
+    \item Sets
+    \item Co-prime
+    \item Dihedral Groups
+    \item Abelian Groups and Non-Abelian Groups
+    \item Groups
+    \item Symmetries 
+    \item Cayley Tables
+    \item Isomorphism
+\end{itemize}
+\end{frame}
+
+\section{Introduction} %intro section
+
+\begin{frame}{Introduction} %intro slides 
+% setting pictures
+\begin{columns}
+\column{.5\textwidth}
+\begin{center}
+    \includegraphics[width=5cm]{images/RW/full.png}
+\end{center}
+\column{.5\textwidth}
+
+\begin{center}
+    \includegraphics[width=5cm]{images/Chapel/Chapel RW circle.png}
+\end{center}
+\end{columns}
+\end{frame}
+
+\section{Graph Theory} %Changing sections
+
+\begin{frame}{Group Theory Definitions} % def slide header
+\begin{itemize} 
+    \item Vertex: Each point where 2 edges meet on a given polygon 
+    \\\vspace{10 pt}
+    \item Edge: The lines of a polygon which joins two vertices together
+    \\\vspace{10 pt}
+    \item Path: A sequence of edges that begins at a vertex, and travels from vertex to vertex along edges of the graph
+\end{itemize}
+\end{frame}
+
+\section{Rose Windows} % section header change to rose windows
+
+\begin{frame}{Rose Windows}
+\begin{itemize}
+\item Notation
+\item Parts 
+\item Examples 
+\item Restrictions 
+\end{itemize}
+\end{frame}
+
+% first slide of windows and configuring the slide
+% window and window with lines
+\begin{frame}{Connect the dots}
+    \begin{columns}
+    \column{.5\textwidth}
+    \begin{center}
+            \includegraphics[width=4.5cm]{images/Chapel/Chapel RW circle.png}
+    \end{center}
+        \column{.5\textwidth}
+    \begin{center}
+            \includegraphics[width=5cm]{images/Chapel/Chapel pic.stencil.png}
+    \end{center}
+    \end{columns}
+\end{frame}
+
+% second slide of windows and configuring the slide 
+% window with lines and lines alone
+\begin{frame}{Connect the dots}
+    \begin{columns}
+    \column{.5\textwidth}
+    \begin{center}
+            \includegraphics[width=5cm]{images/Chapel/Chapel pic.stencil.png}
+    \end{center}
+        \column{.5\textwidth}
+    \begin{center}
+            \includegraphics[width=4.5cm]{images/Chapel/Chapel stencil.png}
+            \end{center}
+    \end{columns}
+\end{frame}
+
+% third slide of windows and configuring the slide
+% lines alone with vertices shown
+\begin{frame}{Connect the dots}
+    \begin{columns}
+    \column{.5\textwidth}
+    \begin{center}
+            \includegraphics[width=5cm]{images/Chapel/Chapel stencil.png}
+    \end{center}
+        \column{.5\textwidth}
+    \begin{center}
+            \includegraphics[width=5cm]{images/Chapel/chapel RWG.png}
+            \end{center}
+    \end{columns}
+\end{frame}
+
+% fourth slide of windows and configuring the slide
+% comparison of where we have gotten 
+\begin{frame}{Connect the dots}
+    \begin{columns}
+    \column{.5\textwidth}
+    \begin{center}
+            \includegraphics[width=5cm]{images/Chapel/Chapel RW circle.png}
+    \end{center}
+        \column{.5\textwidth}
+    \begin{center}
+            \includegraphics[width=5cm]{images/Chapel/chapel RWG.png}
+            \end{center}
+    \end{columns}
+\end{frame}
+
+% fifth slide of windows and configuring the slide
+% lines of window with the drawing used to present information 
+\begin{frame}{Connect the dots}
+    \begin{columns}
+    \column{.5\textwidth}
+    \begin{center}
+            \includegraphics[width=5cm]{images/Chapel/chapel RWG.png}
+    \end{center}
+        \column{.5\textwidth}
+    \begin{center}
+            \includegraphics[width=5cm]{images/ROSE WINDOW.png}
+            \end{center}
+    \end{columns}
+\end{frame}
+
+\begin{frame}{Notation of Rose Windows} % change of header to notation of rose windows
+
+% notation of R
+\begin{columns}
+\column{0.5\textwidth}
+Rose window: $R_n(a,r)$
+
+\column{0.5\textwidth}
+\begin{center}
+    \includegraphics[width=5cm]{images/vertices.jpg}\\
+    $R_{n}(a,r)$
+    \end{center}
+\end{columns}
+\end{frame}
+
+% notation of n
+\begin{frame}{Notation of Rose Windows}
+\begin{columns}
+\column{0.5\textwidth}
+Rose window: $R_n(a,r)$
+\begin{itemize}
+\item $n =$ the number of vertices on each level 
+\end{itemize}
+\column{0.5\textwidth}
+\begin{center}
+    \includegraphics[width=5cm]{images/vertices.jpg}\\
+    $R_{10}(a,r)$
+    \end{center}
+\end{columns}
+\end{frame}
+
+% notation of n slide 2
+\begin{frame}{Notation of Rose Windows}
+\begin{columns}
+\column{0.5\textwidth}
+Rose window: $R_n(a,r)$
+\begin{itemize}
+\item $n =$ the number of vertices on each level 
+\item $vertices = 2n$
+
+\end{itemize}
+\column{0.5\textwidth}
+\begin{center}
+    \includegraphics[width=5cm]{images/vertices.jpg}\\
+    $R_{10}(a,r)$
+    \end{center}
+\end{columns}
+\end{frame}
+
+% notation of vertices
+\begin{frame}{Notation of Rose Windows}
+\begin{columns}
+\column{0.5\textwidth}
+Rose window: $R_n(a,r)$
+The vertices are labeled:
+
+\column{0.5\textwidth}
+    \begin{center}
+        \includegraphics[width=5cm]{images/vertices.jpg}\\
+        $R_{10}(a,r)$
+    \end{center}
+\end{columns}
+\end{frame}
+
+% notation of 'a' (outer vertices)
+\begin{frame}{Notation of Rose Windows}
+\begin{columns}
+\column{0.5\textwidth}
+Rose window: $R_n(a,r)$
+The vertices are labeled:
+\begin{itemize}
+    \item $1,..., n$ which are vertices $A_1,A_2,...,A_n$\vspace{5pt}
+ 
+\end{itemize}
+\column{0.5\textwidth}
+    \begin{center}
+        \includegraphics[width=5cm]{images/vertices.jpg}\\
+        $R_{10}(a,r)$
+    \end{center}
+\end{columns}
+\end{frame}
+
+% notation of inner vertices
+\begin{frame}{Notation of Rose Windows}
+\begin{columns}
+\column{0.5\textwidth}
+Rose window: $R_n(a,r)$
+The vertices are labeled:
+\begin{itemize}
+    \item $1,..., n$ which are vertices $A_1,A_2,...,A_n$\vspace{5pt}
+    \item $n+1,n+1,..., 2n$ which are vertices $B_1,B_2,...,B_n$\\
+\end{itemize}
+\column{0.5\textwidth}
+    \begin{center}
+        \includegraphics[width=5cm]{images/vertices.jpg}\\
+        $R_{10}(a,r)$
+    \end{center}
+\end{columns}
+\end{frame}
+
+
+\begin{frame}{Parts of Rose Windows} % changing title header
+% definition of 'rim', outer edges
+\begin{columns}
+\column{0.5\textwidth}
+Rose window: $R_n(a,r)$
+\begin{itemize}
+\item Rim: $A_i$ - $A_{i+1}$
+\end{itemize}
+\column{0.5\textwidth}
+\begin{center}
+    \includegraphics[width=5cm]{images/rim.png}
+$R_{10}(a,r)$
+\end{center} 
+\end{columns} 
+\end{frame}
+
+% definition of 'in-spokes', edges on the inside
+\begin{frame}{Parts of Rose Windows}
+\begin{columns}
+\column{0.5\textwidth}
+Rose window: $R_n(a,r)$
+\begin{itemize}
+\item In-Spoke: $A_i$ - $B_i$
+\end{itemize}
+\column{0.5\textwidth}
+\begin{center}
+    \includegraphics[width=5cm]{images/in-spokes.png}
+$R_{10}(a,r)$
+\end{center} \end{columns} \end{frame}
+
+% definition 'out-spoke', other set of lines inside the vertices
+\begin{frame}{Parts of Rose Windows}
+\begin{columns}
+\column{0.5\textwidth}
+Rose window: $R_n(a,r)$
+\begin{itemize}
+\item Out-Spoke: $B_i$ - $A_{i+a}$
+\end{itemize}
+\column{0.5\textwidth}
+\begin{center}
+    \includegraphics[width=5cm]{images/out-spokes.png}
+$R_{10}(a,r)$
+\end{center} \end{columns} \end{frame}
+
+% dissecting the spokes
+\begin{frame}{Parts of Rose Windows}
+\begin{columns}
+\column{0.5\textwidth}
+Rose window: $R_n(a,r)$
+\begin{itemize}
+\item Out-Spoke: $B_i$ - $A_{i+a}$
+\item $a =$ spread of $A_n$ vertices (outside vertices) via the in-spoke, out-spoke
+\end{itemize}
+\column{0.5\textwidth}
+\begin{center}
+    \includegraphics[width=5cm]{images/a.png}
+$R_{10}(a,r)$
+\end{center} \end{columns} \end{frame}
+
+% dissecting the spokes part 2
+\begin{frame}{Parts of Rose Windows}
+\begin{columns}
+\column{0.5\textwidth}
+Rose window: $R_n(a,r)$
+\begin{itemize}
+\item Out-Spoke: $B_i$ - $A_{i+a}$
+\item $a =$ spread of $A_n$ vertices (outside vertices) via the in-spoke, out-spoke
+\item $a = 2$
+\end{itemize}
+\column{0.5\textwidth}
+\begin{center}
+    \includegraphics[width=5cm]{images/a.png}
+$R_{10}(2,r)$
+\end{center} \end{columns} \end{frame}
+
+% definition of 'hub', inner edges 
+\begin{frame}{Parts of Rose Windows}
+\begin{columns}
+\column{0.5\textwidth}
+Rose window: $R_n(a,r)$
+\begin{itemize}
+\item Hub: $B_i$ - $B_{i+r}$
+\end{itemize}
+\column{0.5\textwidth}
+\begin{center}
+\includegraphics[width=5cm]{images/hub.png}
+$R_{10}(2,r)$
+\end{center} 
+\end{columns} 
+\end{frame}
+
+% dissection of hub
+\begin{frame}{Parts of Rose Windows}
+\begin{columns}
+\column{0.5\textwidth}
+Rose window: $R_n(a,r)$
+\begin{itemize}
+\item Hub: $B_i$ - $B_{i+r}$
+\item $r =$ spread of the $B_n$ vertices (inside vertices) via the hub
+\end{itemize}
+\column{0.5\textwidth}
+\begin{center}
+\includegraphics[width=5cm]{images/r.png}
+$R_{10}(2,r)$ 
+\end{center} 
+\end{columns} 
+\end{frame}
+
+% dissection of hub part 2
+\begin{frame}{Parts of Rose Windows}
+\begin{columns}
+\column{0.5\textwidth}
+Rose window: $R_n(a,r)$
+\begin{itemize}
+\item Hub: $B_i$ - $B_{i+r}$
+\item $r =$ spread of the $B_n$ vertices (inside vertices) via the hub
+\item $r = 3$
+\end{itemize}
+\column{0.5\textwidth}
+\begin{center}
+\includegraphics[width=5cm]{images/r.png}
+$R_{10}(2,3)$ 
+\end{center} 
+\end{columns} 
+\end{frame}
+
+% combining all edges of a rose window
+\begin{frame}{Parts of Rose Windows}
+\begin{columns}
+\column{0.5\textwidth}
+Rose window: $R_n(a,r)$
+\begin{itemize}
+\item Rim: $A_i$ - $A_{i+1}$ (pink)
+\item In-Spoke: $A_i$ - $B_i$ (purple)
+\item Out-Spoke: $B_i$ - $A_{i+a}$ (blue)
+\item Hub: $B_i$ - $B_{i+r}$ (green)
+\end{itemize}
+\column{0.5\textwidth}
+\begin{center}
+\includegraphics[width=5cm]{images/colored.png}
+$R_{10}(2,3)$ 
+\end{center} 
+\end{columns} 
+\end{frame}
+
+% revisiting previous slide to show the comparisons 
+\begin{frame}{Connect the dots} 
+    \begin{columns}
+    \column{.5\textwidth}
+    \begin{center}
+            \includegraphics[width=5cm]{images/Chapel/chapel RWG.png}
+    \end{center}
+        \column{.5\textwidth}
+    \begin{center}
+            \includegraphics[width=5cm]{images/ROSE WINDOW.png}
+            \end{center}
+    \end{columns}
+\end{frame}
+
+% the comparison with the colors of corresponding edges shown
+\begin{frame}{Parts of a Rose Window}
+    \begin{columns}
+        \column{.5\textwidth}
+    \begin{center}
+            \includegraphics[width=5cm]{images/Chapel/Chapel Colored.png}
+            \vspace{7pt}
+            $R_{12}(1,5)$
+            \end{center}
+        \column{.5\textwidth}
+    \begin{center}
+            \includegraphics[width=4.9cm]{images/colored.png}\\
+            $R_{10}(2,3)$
+    \end{center}
+    \end{columns}
+\end{frame}
+
+% showing other smaller examples
+\begin{frame}{Examples of small n}
+%``I will show examples of Rose Windows by showing examples of smaller dimensioned graphs and how the symmetry properties hold."
+\vspace{5 pt}
+\begin{itemize}
+\item n = 3
+\item n = 4
+\end{itemize}
+%They may not look like rose windows, but the same properties hold.
+\end{frame}
+\begin{frame}{n = 3}
+\begin{center}
+This is what a Rose window of $R_3(1,1)$\\
+    \vspace{10pt}
+\includegraphics[width=5cm]{images/R_3(2,1).png}
+\end{center} 
+\end{frame}
+
+% parts of the smaller examples laid out
+\begin{frame}{n = 3}
+\begin{columns}
+\column{0.25\textwidth}
+\begin{itemize}
+    \item $1,..., n$ which are vertices $A_1,A_2,...,A_n$\vspace{5pt}
+    \item $n+1,n+1,..., 2n$ which are vertices $B_1,B_2,...,B_n$\\
+\end{itemize}
+\column{0.25\textwidth}
+Vertices: 
+\vspace{5pt}
+\begin{itemize}
+\item \hspace{5pt}$A_1: 1$\\
+\item \hspace{5pt}$A_2: 2$\\
+\item \hspace{5pt}$A_3: 3$\\ \vspace{5pt}
+\item \hspace{5pt}$B_1: 4$\\
+\item \hspace{5pt}$B_2: 5$\\
+\item \hspace{5pt}$B_3: 6$
+\end{itemize}
+\column{0.5\textwidth}
+\begin{center}
+$R_3(1,1)$\\
+    \includegraphics[width=5cm]{images/R_3(2,1).png}\\
+
+\end{center}
+\vspace{15pt} 
+\end{columns} 
+\end{frame}
+
+% showing rim and hub edges of small example
+\begin{frame}{n = 3}
+\begin{columns}
+\column{0.5\textwidth}
+Rim: $A_i$ - $A_{i+1}$\hspace{10pt}\small(pink)
+\vspace{5pt}
+\begin{itemize}
+\item \hspace{5pt}$A_1 - A_2$\\
+\item \hspace{5pt}$A_2 - A_3$\\
+\item \hspace{5pt}$A_3 - A_1$\\ \vspace{15pt}
+\end{itemize}
+Hub: $B_i$ - $B_{i+r}$\hspace{15pt}\small(green)
+\vspace{5pt}
+\begin{itemize}
+\item \hspace{5pt}$B_1 - B_2$\\
+\item \hspace{5pt}$B_2 - B_3$\\
+\item \hspace{5pt}$B_3 - B_1$
+\end{itemize}
+\column{0.5\textwidth}
+\begin{center}
+$R_3(1,1)$\\
+    \includegraphics[width=5cm]{images/R_3(2,1) edges.png}\\
+\end{center} \vspace{15pt} \end{columns} \end{frame}
+
+% showing in-spokes and out-spokes of small example
+\begin{frame}{n = 3}
+\begin{columns}
+\column{0.5\textwidth}
+In-Spoke: $A_i$ - $B_i$ \hspace{15pt}\small(purple)
+\vspace{5pt}
+\begin{itemize}
+\item \hspace{5pt}$A_1 - B_1$\\
+\item \hspace{5pt}$A_2 - B_2$\\
+\item \hspace{5pt}$A_3 - B_3$\\ \vspace{15pt}
+\end{itemize}
+Out-Spoke: $B_i$ - $A_{i+a}$\hspace{10pt}\small(blue)
+\vspace{5pt}
+\begin{itemize}
+\item \hspace{5pt}$B_1 - A_2$\\
+\item \hspace{5pt}$B_2 - A_3$\\
+\item \hspace{5pt}$B_3 - A_1$
+\end{itemize}
+\column{0.5\textwidth}
+\begin{center}
+$R_3(1,1)$\\
+    \includegraphics[width=5cm]{images/R_3(2,1) spokes.png}\\
+\end{center} \vspace{15pt} \end{columns} \end{frame}
+
+% showing all colors of example n=3
+\begin{frame}{n = 3}
+\begin{center}
+This is a Rose window of $R_3(1,1)$\\
+    \vspace{10pt}
+\includegraphics[width=5cm]{images/R_3(2,1) colored.png}
+\end{center} \end{frame}
+
+% what happens if you flip 'a' and 'r'
+\begin{frame}{n = 3}
+\begin{center}
+      You can alter $(a,r)$ to create different paths inside the polygon.  
+\end{center}
+    \begin{columns}
+\column{0.5\textwidth}
+\begin{center}
+    $R_3(2,1)$\\
+    \vspace{15pt}
+        \includegraphics[width=4cm]{images/R_3(1,2) copy.png} 
+\end{center}
+    \column{0.4\textwidth}
+\begin{center}
+       $R_3(1,2)$\\
+       \vspace{15pt}
+       \includegraphics[width=4cm]{images/R_3(2,1)non named.png}
+\end{center} \end{columns} \end{frame}
+
+% example with n=4
+\begin{frame}{n = 4}
+\begin{center}
+This is a Rose window of $R_4(3,1)$\\
+\vspace{10pt}
+\includegraphics[width=5cm]{images/R_4(3,3).png}
+\end{center} \end{frame}
+
+% showing vertices of n = 4 example
+\begin{frame}{n = 4}
+\begin{columns}
+
+\column{0.25\textwidth}
+\begin{itemize}
+   \item $1,..., n$ which are vertices $A_1,A_2,...,A_n$\vspace{5pt}
+    \item $n+1,n+1,..., 2n$ which are vertices $B_1,B_2,...,B_n$\\
+\end{itemize}
+\column{0.25\textwidth}
+Vertices:
+\begin{itemize}
+\item \hspace{5pt}$A_1: 1$\\
+\item \hspace{5pt}$A_2: 2$\\
+\item \hspace{5pt}$A_3: 3$\\ 
+\item \hspace{5pt}$A_4: 4$\vspace{5pt}
+\item \hspace{5pt}$B_1: 5$\\
+\item \hspace{5pt}$B_2: 6$\\
+\item \hspace{5pt}$B_3: 7$
+\item \hspace{5pt}$B_4: 8$
+\end{itemize}
+\column{0.5\textwidth}
+\begin{center}
+$R_4(3,1)$\\
+\vspace{15pt}
+        \includegraphics[width=5cm]{images/R_4(3,3).png}
+\end{center}
+\end{columns}
+\end{frame}
+
+% showing rim and hub edges colored on n = 4 example
+\begin{frame}{n = 4}
+\begin{columns}
+\column{0.5\textwidth}
+Rim: $A_i$ - $A_{i+1}$\hspace{10pt}\small(pink)
+\begin{itemize}
+\item \hspace{3pt}$A_1 - A_2$\\
+\item \hspace{3pt}$A_2 - A_3$\\
+\item \hspace{3pt}$A_3 - A_4$\\ 
+\item \hspace{3pt}$A_4 - A_1$\\
+\vspace{5pt} \end{itemize}
+Hub: $B_i$ - $B_{i+r}$\hspace{15pt}\small(green)
+\begin{itemize}
+\item \hspace{3pt}$B_1 - B_2$\\
+\item \hspace{3pt}$B_2 - B_3$\\
+\item \hspace{3pt}$B_3 - B_4$\\
+\item \hspace{3pt}$B_4 - B_1$
+\end{itemize}
+\column{0.5\textwidth}
+\begin{center}
+$R_4(3,1)$\\
+\vspace{15pt}
+        \includegraphics[width=5cm]{images/R_4(3,3) edges.png}
+\end{center} \end{columns} \end{frame}
+
+% showing in-spoke and out-spokes of n = 4 example 
+\begin{frame}{n = 4}
+\begin{columns}
+\column{0.5\textwidth}
+In-Spoke: $A_i$ - $B_i$\hspace{20pt}\small(purple)
+\begin{itemize}
+\item \hspace{3pt}$A_1 - B_1$\\
+\item \hspace{3pt}$A_2 - B_2$\\
+\item \hspace{3pt}$A_3 - B_3$\\ 
+\item \hspace{3pt}$A_4 - B_4$\\
+\vspace{5pt}
+\end{itemize}
+Out-Spoke: $B_i$ - $A_{i+a}$\hspace{15pt}\small(blue)
+\begin{itemize}
+\item \hspace{3pt}$B_1 - A_4$\\
+\item \hspace{3pt}$B_2 - A_1$\\
+\item \hspace{3pt}$B_3 - A_2$\\
+\item \hspace{3pt}$B_4 - A_3$
+\end{itemize}
+\column{0.5\textwidth}
+\begin{center}
+$R_4(3,1)$\\
+\vspace{15pt}
+    \includegraphics[width=5cm]{images/R_4(3,3) spokes.png}
+\end{center}  \end{columns} \end{frame}
+
+% showing colored example of n = 4 example
+\begin{frame}{n = 4}
+\begin{center}
+This is a Rose window of $R_4(3,1)$\\
+\vspace{10pt}
+\includegraphics[width=5cm]{images/R_4(3,3) color.png}
+\end{center} \end{frame}
+
+% showing n = 4 example with different 'a' and 'r' values
+\begin{frame}{n = 4}
+\begin{center}
+You can alter the $a$ and $r$ values, which will change the location of the spokes. 
+\end{center}
+\begin{columns}
+\column{0.5\textwidth}
+\begin{center}
+$R_4(3,1)$\\
+\vspace{10pt}
+    \includegraphics[width=4cm]{images/R_4(3,1)colored unnumbered.png}
+\end{center}
+ \column{0.4\textwidth}
+\begin{center}
+$R_4(1,1)$\\
+\vspace{10pt}
+    \includegraphics[width=4cm]{images/R_4(1,1)colored unnumbered.png}
+\end{center}
+\end{columns}
+\end{frame}
+
+ % co-prime definition
+\begin{frame}{Restrictions on $r$}
+    While you can alter $(a,r)$, not every value will work. 
+    \vspace{10pt}\\$r$ must be co-prime to $n$. \\\vspace{10pt}
+    Co-Prime: Two numbers are co-prime if the only common factors they have is 1. 
+\end{frame}
+
+% restrictions on 'r'
+\begin{frame}{Restrictions on $r$} 
+    When $r$ is co-prime to $n$, the $B$ vertices will not all connect together.    
+    \\\vspace{10pt}
+    This is not the case with $a$ since the rim ensures that all $A$ vertices are connected. \\
+    Rim: $A_i$ - $A_{i+1}$\\
+\end{frame}
+
+% showing an example of a restrictions on 'r'
+\begin{frame}{Restrictions on $r$}
+This shows that  when $r$ is co-prime, the $B$ vertices don't connect.
+\begin{center}
+$R_4(2,2)$\\
+    \includegraphics[width=5cm]{images/R_4(2,2).png}
+\end{center}
+\end{frame}
+
+% showing an example of a restrictions on 'a'
+\begin{frame}{Restrictions on $r$}
+\begin{center}
+    Here is an example where $a$ is co-prime, and the rose window holds: $R_4(2,1)$\\
+    \vspace{10pt}
+      \includegraphics[width=4cm]{images/R_4(2,1) colored.png}\\
+    %They might just look a little funky, but it shows that $a$ can be co prime to $n$.
+    \end{center}
+\end{frame}
+
+
+\section{Types of Symmetry} % change of section header
+% definitions slide
+\begin{frame}{Definitions}
+     Abelian Group: (commutative) $ab=ba$
+    \\\vspace{5pt}
+    Non-Abelian Group: $ab\not = ba$\\ \vspace{5pt}
+    Group: A set of elements combined with an operation
+    \\\vspace{5pt}
+    Dihedral Group: A group of symmetries of a regular polygon which includes rotations and reflections 
+    \\\vspace{5pt}
+ 
+\end{frame}
+
+% dihedral groups of D_4
+\begin{frame}{Dihedral Groups}
+  \begin{columns}
+\column{0.4\textwidth}
+\begin{center}
+  $D_4$ contains two abelian subgroups\\\vspace{5pt}$D_4$  is a non-abelian group\\
+    %``Lets look at $D_4$ (which is a famous example) because it has 2 abelian subgroups, but as a whole, $D_4$ is non-abelian group"\\
+  \end{center}
+  \column{0.6\textwidth}
+\begin{center}
+     $D_4$\\
+     \includegraphics[width=5.5cm]{images/D_4 Cayley Table.png}
+
+\end{center}
+\end{columns}
+\end{frame}
+
+
+% showing the labels for the types of symmetry
+\begin{frame}{Types of Symmetry}
+There are 3 types of symmetry that can be applied to rose window graphs
+\begin{itemize}
+\item $\rho$
+\item $\mu$
+\item $\sigma$
+\end{itemize}
+\end{frame}
+
+% looking at the rho symmetry 
+\begin{frame}{$\rho$}
+\begin{center}
+    $\rho$ is a rotation of a rose graph in a clockwise fashion\\
+$\rho: A_i - A_{i+1}, \hspace{15pt} B_i - B_{i+1}$\\
+\end{center}
+\begin{columns}
+\column{0.3\textwidth}
+\begin{center}
+\includegraphics[width=3cm]{images/R_3(1,1)/R_3(1,1) rho0.png}\\
+    $\rho _0$
+\end{center}
+\column{0.3\textwidth}
+\begin{center}
+\includegraphics[width=3cm]{images/R_3(1,1)/R_3(1,1) rho1 numbered.png}\\    $\rho _1$
+\end{center}
+\column{0.3\textwidth}
+\begin{center}
+\includegraphics[width=3cm]{images/R_3(1,1)/R_3(1,1) rho2 numbered.png}\\    $\rho _2$
+\end{center}
+\end{columns}
+\end{frame}
+
+% showing rho on the example of n = 3
+\begin{frame}{$n = 3$}
+\begin{center}
+$\rho: A_i - A_{i+1}, \hspace{15pt} B_i - B_{i+1}$\\
+\end{center}
+\begin{columns}
+\column{0.3\textwidth}
+\begin{center}
+       \footnotesize $A_1 - A_2$\hspace{10pt} $B_1 - B_2$\\
+\vspace{10pt}
+
+\includegraphics[width=3cm]{images/R_3(1,1)/R_3(1,1) rho0.png}\\
+    $\rho _0$
+\end{center}
+\column{0.3\textwidth}
+\begin{center}
+       \footnotesize  $A_2 - A_3$\hspace{10pt} $B_2 - B_3$\\
+\vspace{10pt}
+\includegraphics[width=3cm]{images/R_3(1,1)/R_3(1,1) rho1 numbered.png}\\    $\rho _1$
+\end{center}
+\column{0.3\textwidth}
+\begin{center}
+       \footnotesize  $A_3 - A_1$\hspace{10pt} $B_3 - B_1$\\
+\vspace{10pt}
+\includegraphics[width=3cm]{images/R_3(1,1)/R_3(1,1) rho2 numbered.png}\\    $\rho_2$
+\end{center}
+\end{columns}
+\end{frame}
+
+
+\begin{frame}{$\mu$}
+\begin{center}
+    $\mu$ is a reflection of a rose graph about a certain vertex\\
+$\mu: A_i - A_{-i},\hspace{15pt} B_i - B_{-a-i} $ \\
+\end{center}
+\begin{columns}
+\column{0.3\textwidth}
+\begin{center}
+    \includegraphics[width=3cm]{images/R_3(1,1) mu1.png}\\
+    $\mu _1$
+\end{center}
+\column{0.3\textwidth}
+\begin{center}
+    \includegraphics[width=3cm]{images/R_3(1,1) mu2.png}\\
+    $\mu _2$
+\end{center}
+\column{0.3\textwidth}
+\begin{center}
+    \includegraphics[width=3cm]{images/R_3(1,1) mu3.png}\\
+    $\mu_3$
+\end{center}
+\end{columns}
+\end{frame}
+
+% showing the mu reflection on the n = 3 example
+\begin{frame}{$n = 3$}
+\begin{center}
+$\mu: A_i - A_{-i},\hspace{15pt} B_i - B_{-a-i} $ \\
+\end{center}
+\begin{columns}
+\column{0.3\textwidth}
+\begin{center}
+    $\mu _1$
+    \vspace{10pt}
+    \includegraphics[width=3cm]{images/R_3(1,1) mu1.png}\\
+    \vspace{5pt}
+    \footnotesize$A_1 - A_1\hspace{5pt}B_1 - B_1$
+    \footnotesize$A_2 - A_3\hspace{5pt}B_2 - B_3$
+    \footnotesize$A_3 - A_2\hspace{5pt}B_3 - B_2$
+\end{center}
+\column{0.3\textwidth}
+\begin{center}
+    $\mu _2$
+    \vspace{10pt}
+    \includegraphics[width=3cm]{images/R_3(1,1) mu2.png}\\
+    \vspace{5pt}
+    \footnotesize$A_1 - A_3\hspace{5pt}B_1 - B_3$
+    \footnotesize$A_2 - A_2\hspace{5pt}B_2 - B_2$
+    \footnotesize$A_3 - A_1\hspace{5pt}B_3 - B_1$
+\end{center}
+\column{0.3\textwidth}
+\begin{center}
+    $\mu_3$
+    \vspace{10pt}
+    \includegraphics[width=3cm]{images/R_3(1,1) mu3.png}\\
+    \vspace{5pt}
+    \footnotesize$A_1 - A_2\hspace{5pt}B_1 - B_2$
+    \footnotesize$A_2 - A_1\hspace{5pt}B_2 - B_1$
+    \footnotesize$A_3 - A_3\hspace{5pt}B_3 - B_3$
+\end{center}
+\end{columns}
+\end{frame}
+
+% explaining the sigma symmetry 
+\begin{frame}{$\sigma$}
+ %”The last type of symmetry is sigma, we will come back to that. Instead lets look at what happens when we apply multiple symmetries to the same polygon”
+There is a third type of symmetry called $\sigma$ (sigma). We will come back to this later. 
+\end{frame}
+
+% more definitions 
+\begin{frame}{Definitions}
+    Cayley Table: Arranges all the possible products of a group's elements.
+   \\\vspace{5pt}
+    Group: A set of elements combined with an operation
+    \\\vspace{5pt}
+    Dihedral Group: A group of symmetries of a regular polygon which includes rotations and reflections 
+    \\\vspace{5pt}
+\end{frame}
+
+% explaining what dihedral groups
+\begin{frame}{Dihedral Groups}
+If you just consider the symmetries formed only by $\rho$ and $\mu$, those symmetries form the exact same sets as the dihedral group. \\\vspace{15pt}
+This is partly because with the rose window you are looking at the outside polygon, the inside one will follow along.\\\vspace{15pt}
+    %"Lets look at those symmetries applied to the smaller $n$ examples to prove this"
+\end{frame}
+
+% the dihedral table of R_3
+\begin{frame}{n = 3}
+This table is formed from the symmetries of $R_3$.\\
+\begin{center}
+    \includegraphics[width=6cm]{images/D_3 blue.png}
+\end{center}
+\end{frame}
+
+% a cayley table of D_3
+\begin{frame}{n = 3}
+This is the Cayley table of $D_3$.\\
+\begin{center}
+    \includegraphics[width=6cm]{images/D_3 red.png}
+\end{center}
+\end{frame}
+
+% showing they are the same tables
+\begin{frame}{n = 3}
+You can see here that $R_3=D_3$ since they are the same table \\ 
+\begin{center}
+    \includegraphics[width=6cm]{images/D_3 purple.png}
+\end{center}
+%``Now that we established that $R_3=D_3$, lets confirm that it is not just a coincidence by showing the same thing with $R_4$ and $D_4$.
+\end{frame}
+
+% showing rho symmetry with n = 4 example 
+\begin{frame}{n = 4}
+\begin{center}
+$\rho: A_i - A_{i+1}, B_i - B_{i+1}$
+\end{center}
+\begin{columns}
+\column{0.25\textwidth}
+\begin{center}
+\small$A_1-A_2\hspace{7pt}B_1-B_2$\\
+\vspace{10pt}
+    \includegraphics[width=2.4cm]{images/R_4(3,1) rho0.png}
+    $\rho_0$
+\end{center}
+\column{0.25\textwidth}
+\begin{center}
+\small$A_2-A_3\hspace{7pt}B_2-B_3$\\
+\vspace{10pt}
+    \includegraphics[width=2.4cm]{images/R_4(3,1) rho1.png} 
+    $\rho_1$
+\end{center}
+\column{0.25\textwidth}
+\begin{center}
+\small$A_3-A_4\hspace{7pt}B_3-B_4$\\
+\vspace{10pt}
+    \includegraphics[width=2.4cm]{images/R_4(3,1) rho2.png}
+    $\rho_2$
+\end{center}
+\column{0.25\textwidth}
+\begin{center}
+\small$A_4-A_1\hspace{7pt}B_4-B_1$\\
+\vspace{10pt}
+    \includegraphics[width=2.4cm]{images/R_4(3,1) rho3.png}
+    $\rho_3$
+\end{center}
+\end{columns}
+\end{frame}
+
+% showing mu symmetry for n = 4 example
+\begin{frame}{n = 4}
+\begin{center}
+    $\mu: A_i - A_{-i}, B_i - B_{-a-i} $ 
+\end{center}
+%"next lets look at what happens when we apply multiple symmetries to the same polygon"\\``because this example is a square, $\mu_1=\mu_3$ and $\mu_2=\mu_4$, $\mu_3=\delta_1$ and $\mu_4=\delta_2$." ``Different from how $D_4$ is (H,V,D,D') because of the equation"
+\begin{columns}
+\column{0.5\textwidth}
+\begin{center}
+    \includegraphics[width=3.75cm]{images/R_4(3,1) mu1.png}
+    $A_1-A_1\hspace{6pt}B_1-B_1$\\
+    $A_2-A_4\hspace{6pt}B_2-B_4$\\
+    $A_3-A_3\hspace{6pt}B_3-B_3$\\
+    $A_4-A_2\hspace{6pt}B_4-B_2$\\
+\end{center}
+\column{0.5\textwidth}
+\begin{center}
+    \includegraphics[width=3.75cm]{images/R_4(3,1) mu2.png}
+    $A_1-A_3\hspace{6pt}B_1-B_3$\\
+    $A_2-A_2\hspace{6pt}B_2-B_2$\\
+    $A_3-A_1\hspace{6pt}B_3-B_1$\\
+    $A_4-A_4\hspace{6pt}B_4-B_4$\\
+\end{center}
+\end{columns}
+\end{frame}
+
+% dihedral table of R_4
+\begin{frame}{n = 4}
+This table is formed from the symmetries of $R_4$. 
+%I have included the abelian subgroups\\
+\begin{center}
+    \includegraphics[width=6cm]{images/D_4 blue.png} 
+\end{center}
+\end{frame}
+
+% cayley table of n = 4 example 
+\begin{frame}{n = 4}
+This is the Cayley table of $D_4$.\\
+\begin{center}
+    \includegraphics[width=5cm]{images/D_4 Cayley Table.png}
+\end{center}
+\end{frame}
+
+% showing they are the same table
+\begin{frame}{n = 4}
+You can see here that $R_4=D_4$ since they are the same table \\ 
+\begin{center}
+    \includegraphics[width=6cm]{images/D_4 purple.png}
+\end{center}
+%"Now that we established that $R_3=D_3$ and $R_4=D_4$ as well.We've seen that $R_n=D_n$, so the symmetries of rose windows are dihedral groups.
+\end{frame}
+
+\begin{frame}{Types of Symmetry}
+        We've seen that $$R_n=D_n$$\\so the symmetries of rose window graphs are dihedral groups. 
+\end{frame}
+
+
+
+\begin{frame} {Types of Symmetry}
+%So we skipped over $\sigma$ earlier because it is not included in the dihedral groups and it is not as straight forward as $\rho$ and $\mu$ along with being a lemma itself.\\ \vspace{10pt}
+Lets establish that $\sigma$ has the same kind of symmetry  property as $\rho$ and $\mu$
+\end{frame}
+
+% definitions for the proof
+\begin{frame}{Definitions}
+Definitions: \\
+    \vspace{5pt}
+    Isomorphism: A relationship between two sets such that preserves the binary relationships between elements of the sets at preserved; $A\cong B$ \\
+    \vspace{5pt}
+    N-Cycle: Permutation cycle\\
+    \vspace{5pt}
+    Co-Prime: Two numbers are co-prime if the only common factors they have is 1.
+\end{frame}
+
+% explaining n-cycles and showing with colors on the example
+\begin{frame}{Definitions}
+N-Cycle of 1 means that you will go through all of the elements in that set once before repeating any of the elements. 
+\begin{columns}
+\column{0.5\textwidth}
+\begin{center}
+    In the sense of Rose Window Graphs that means all the vertices (elements) must all be connected and you only pass through the same vertex once before every vertex is covered.
+\end{center}
+\column{0.5\textwidth}
+\begin{center}
+    \includegraphics[width=3cm]{images/n-cycle.png}
+\end{center}
+\end{columns}
+\end{frame}
+
+% showing the isomorphic change of the example window
+\begin{frame}{Isomorphism}
+    Before we continue it is important to include the isomorphic equation essential to a rose window, 
+    If $(n,r)=1$ then, 
+    $$R_n(a,r)\cong R_n(ar^{-1},r^{-1})$$
+  \begin{columns}
+  \column{.5\textwidth}
+  \begin{center}
+      \includegraphics[width=4cm]{images/colored.png}
+  \end{center}
+    \column{.5\textwidth}
+    \begin{center}
+      \includegraphics[width=4cm]{images/Isomorphism green.png}
+  \end{center}
+  \end{columns}
+\end{frame}
+
+% explaining what happened in the previous slide
+\begin{frame}{Isomorphism}
+    Before we continue it is important to include the isomorphic equation essential to a rose window, 
+    If $(n,r)=1$ then, 
+    $$R_n(a,r)\cong R_n(ar^{-1},r^{-1})$$
+    the isomorphism is being given by $$A_i\to B_{-ir^{-1}},B_i\to A_{-ir^{-1}}$$
+    %``This comes back in later"
+\end{frame}
+
+% showing the colored examples with the symmetry equation applied to them
+\begin{frame}{Isomorphism}
+    \begin{columns}
+        \column{.5\textwidth}
+\begin{center}
+    $A_i \to B_{-ir}, B_i \to A_{-ir}$\\
+    \vspace{10pt}
+    \includegraphics[width=4cm]{images/isomorphism pink.png}
+\end{center}
+    \column{.5\textwidth}
+        \begin{center}
+         $A_i\to B_{-ir^{-1}},B_i\to A_{-ir^{-1}}$\\
+\vspace{10pt}        \includegraphics[width=4cm]{images/Isomorphism green.png}
+    \end{center}
+    \end{columns}
+\end{frame}
+
+% the lemma of sigma symmetry 
+\begin{frame} {$\sigma$}
+\begin{center}
+    Lemma: There is a symmetry $\sigma$ that sends the rims to the hubs and the hubs to the rims\\
+    %where the spokes still hold
+\end{center}
+\begin{columns}
+\column{0.5\textwidth}
+\begin{center}
+    \includegraphics[width=4.5cm]{images/colored.png}
+\end{center}
+\column{0.5\textwidth}
+\begin{center}
+    \includegraphics[width=4.5cm]{images/inverse.png}
+\end{center}
+\end{columns}
+\end{frame}
+
+% remaining part of the lemma
+\begin{frame} {$\sigma$}
+\begin{center}
+Lemma: There is a symmetry $\sigma$ that sends the rims to the hubs and the hubs to the rims if and only if $r^2=\pm 1$ and $ra=\pm a$.\\
+\end{center}
+\begin{columns}
+\column{0.5\textwidth}
+\begin{center}
+    \includegraphics[width=4.5cm]{images/colored.png}
+\end{center}
+\column{0.5\textwidth}
+\begin{center}
+    \includegraphics[width=4.5cm]{images/inverse.png}
+\end{center}
+\end{columns}
+\end{frame}
+
+% showing the difference of isomorphism result and lemma result 
+\begin{frame}{Isomorphism}
+    \begin{columns}
+        \column{.5\textwidth}
+\begin{center}
+    Isomorphism result:\\
+    \vspace{10pt}
+    \includegraphics[width=4cm]{images/Isomorphism green.png}
+\end{center}
+    \column{.5\textwidth}
+        \begin{center}
+         Lemma result:\\
+         \vspace{10pt}
+        \includegraphics[width=4.1cm]{images/inverse.png}
+    \end{center}
+    \end{columns}
+\end{frame}
+
+
+% first half of the proof of sigma
+\begin{frame} {$\sigma$ proof $\rightarrow$}
+\begin{columns}
+\column{.5\textwidth}\begin{center}
+    Assume: $r^2=\pm 1  \text { and }ra=\pm a$ \\\vspace{10pt} Then since $ra=\pm a$, we can assume that $ra=-a$. \\\vspace{10pt} 
+%Consider the isomorphism which is given by $$A_i\to B_{-ir^{-1}}\hspace{10pt}B_i\to A_{-ir^{-1}}$$. \\
+\end{center}
+\column{.5\textwidth}
+\begin{center}
+        \includegraphics[width=5cm]{images/Isomorphism green.png}
+\end{center}
+\end{columns}
+\end{frame}
+
+% second piece of the proof of sigma
+\begin{frame} {$\sigma$ proof $\rightarrow$}
+\begin{columns}
+\column{.5\textwidth}\begin{center}
+    Assume: $r^2=\pm 1  \text { and }ra=\pm a$ \\\vspace{10pt} Then since $ra=\pm a$, we can assume that $ra=-a$. \\\vspace{10pt} 
+Consider the isomorphism which is given by $$A_i\to B_{-ir^{-1}}\hspace{10pt}B_i\to A_{-ir^{-1}}$$. \\
+\end{center}
+\column{.5\textwidth}
+\begin{center}
+        \includegraphics[width=5cm]{images/Isomorphism green.png}
+\end{center}
+\end{columns}
+\end{frame}
+
+% mathematics part of the proof
+\begin{frame} {$\sigma$ proof $\rightarrow$}
+Assume: $$r^2=\pm 1  \text { and }ra=\pm a$$ Then since $ra=\pm a$, we can assume that $ra=-a$. Consider the isomorphism which is given by $$A_i\to B_{-ir^{-1}}\hspace{10pt}B_i\to A_{-ir^{-1}}$$   Therefore $\sigma$ can allow  $$A_i\to B_{ri},\hspace{15pt}B_i\to A_{ri}$$ to be given to accomplish the interchanging of the rim and hub edges.
+\end{frame}
+
+% colored images of the sigma proof 
+\begin{frame}{$\sigma$ proof $\rightarrow$}
+    \begin{columns}
+    \column{.5\textwidth}
+    \begin{center}
+        $$A_i\to B_{-ir^{-1}}\hspace{10pt}B_i\to A_{-ir^{-1}}$$
+                \includegraphics[width=4cm]{images/Isomorphism green.png}
+    \end{center}
+    \column{.5\textwidth}
+    \begin{center}
+        $$A_i\to B_{ri},\hspace{15pt}B_i\to A_{ri}$$
+                \includegraphics[width=4cm]{images/inverse.png}
+    \end{center}
+    \end{columns}
+\end{frame}
+
+% showing the assumption of the sigma proof
+\begin{frame} {$\sigma$ proof $\rightarrow$}
+    Assumption: \hspace{45pt}$r^2=\pm 1  \text { and }ra=\pm a$\\\vspace{10pt}
+Recall:\hspace{3pt}$A_i\to B_{i(-r^{-1})},\hspace{7pt}B_i\to A_{i(-r^{-1})}$\hspace{20pt}Goal: $A_i\to B_{ri},\hspace{7pt}B_i\to A_{ri}$\\
+\end{frame}
+
+% showing the proof of the assumption  
+\begin{frame} {$\sigma$ proof $\rightarrow$}
+    Assumption: \hspace{45pt}$r^2=\pm 1  \text { and }ra=\pm a$\\\vspace{10pt}
+Recall:\hspace{3pt}$A_i\to B_{i(-r^{-1})},\hspace{7pt}B_i\to A_{i(-r^{-1})}$\hspace{20pt}Goal: $A_i\to B_{ri},\hspace{7pt}B_i\to A_{ri}$\\\vspace{10pt}
+Let:\\
+\vspace{5pt}$r=-1$ \hspace{30pt}$-r^{-1}: -\frac{1}{r}=1$ \hspace{20pt}so \hspace{20pt}$A_i\to B_{ri}, B_i\to A_{ri}$\\\vspace{5pt}
+$r=1$\hspace{42pt}$-r^{-1}: -\frac{1}{r}=-1$ \hspace{12pt}so \hspace{15pt} $A_i\to B_{-ri}, B_i\to A_{-ri}$\\\vspace{10pt}
+\end{frame}
+
+% showing the proof holds us
+\begin{frame} {$\sigma$ proof $\rightarrow$}
+    Assumption: \hspace{45pt}$r^2=\pm 1  \text { and }ra=\pm a$\\\vspace{10pt}
+Recall:\hspace{3pt}$A_i\to B_{i(-r^{-1})},\hspace{7pt}B_i\to A_{i(-r^{-1})}$\hspace{20pt}Goal: $A_i\to B_{ri},\hspace{7pt}B_i\to A_{ri}$\\\vspace{10pt}
+Let:\\
+\vspace{5pt}$r=-1$ \hspace{30pt}$-r^{-1}: -\frac{1}{r}=1$ \hspace{20pt}so \hspace{20pt}$A_i\to B_{ri}, B_i\to A_{ri}$\\\vspace{5pt}
+$r=1$\hspace{42pt}$-r^{-1}: -\frac{1}{r}=-1$ \hspace{12pt}so \hspace{15pt} $A_i\to B_{-ri}, B_i\to A_{-ri}$\\\vspace{10pt}
+\begin{center}
+    Since $ar=\pm a$, then $r=\pm 1$. This allows $-r=r$\\\vspace{3pt} So $A_i\to B_{ri},B_i\to A_{ri}$ and $r^2=\pm 1 \text{ and } ra=\pm a$\\
+    \end{center}
+\end{frame}
+
+% final colored proof of first half of sigma
+\begin{frame}{$\sigma$ proof $\rightarrow$}
+    \begin{center}
+        So $A_i\to B_{ri},B_i\to A_{ri}$ and $r^2=\pm 1, \hspace{5pt} ra=\pm a$\\\vspace{10pt}
+        \includegraphics[width=5cm]{images/inverse.png}
+    \end{center}
+\end{frame}
+
+% second half of the proof
+\begin{frame} {$\sigma$ proof $\leftarrow$}
+Assume: $\sigma$ is the symmetry which interchanges rim and hub edges. 
+\begin{columns}
+\column{0.5\textwidth}
+\begin{center}
+    \includegraphics[width=4.5cm]{images/colored.png}
+\end{center}
+\column{0.5\textwidth}
+\begin{center}
+    \includegraphics[width=4.5cm]{images/inverse.png}
+\end{center}
+\end{columns}
+\end{frame}
+
+% assumption of the second half of the proof
+\begin{frame} {$\sigma$ proof $\leftarrow$}
+Assume: $\sigma$ is the symmetry which interchanges rim and hub edges.\\\vspace{5pt} The hub edges must form an n-cycle and (r,n) must be 1. 
+%So the hub edges can connect back to their starting location. 
+\end{frame}
+
+% recalling the facts needed for the second half of the proof
+\begin{frame} {$\sigma$ proof $\leftarrow$}
+%Assume $\sigma$ is the symmetry which interchanges rim and hub edges. The hub edges must form an n-cycle and (r,n) must be 1. %So the hub edges can connect back to their starting location. \vspace{10pt}
+\begin{columns}
+\column{0.5\textwidth}
+Recall:\\\vspace{5pt}
+n-cycle = 1\\\vspace{5pt} All of the elements in that set are present once before repeating any of the elements. \\\vspace{10pt}
+    %Meaning they must all be connected and you only pass through the same vertex once before every vertex is covered.
+    $(r,n)=1$\\\vspace{5pt}
+     r and n are co-prime, so their only common factor is 1.
+\column{0.5\textwidth}
+\begin{center}
+    \includegraphics[width=5cm]{images/n-cycle.png}
+\end{center}
+\end{columns}
+%``Why the co-prime doesn't work again"
+\end{frame}
+
+% showing what is happening in this half of the proof
+\begin{frame} {$\sigma$ proof $\leftarrow$}
+ By applying the correct element of $D_n$, we can assume that $$A_{0\sigma}=B_0 \text{ and }B_{0\sigma}=A_0$$. \\
+ \begin{columns}
+      \column{.5\textwidth}
+       \begin{center}
+ \includegraphics[width=4cm]{images/A_0.png}
+ \end{center}
+ \column{.5\textwidth}
+   \begin{center}
+ \includegraphics[width=4cm]{images/B_0.png}
+  \end{center}
+ \end{columns}
+  %By applying the correct element of $D_n$,so having an $n$ which holds to the previous information.
+%$A$ and $B$ swapping one for one
+\end{frame}
+
+% showing assumptions we can make off a correct choice of 'r'
+\begin{frame} {$\sigma$ proof $\leftarrow$}
+ By applying the correct element of $D_n$, we can assume that $$A_{0\sigma}=B_0 \text{ and }B_{0\sigma}=A_0$$. \\ By a correct choice of $r$ such that, we can assume $$A_{1\sigma}=B_r,A_{2\sigma}=B_{2r},...,A_{i\sigma}=B_{ir}$$.
+ \begin{center}
+     \includegraphics[width=2.75cm]{images/B_ir.png}
+ \end{center}
+\end{frame}
+
+% Showing how the rim and hub edges have swapped
+\begin{frame} {$\sigma$ proof $\leftarrow$}
+\begin{columns}
+\column{0.5\textwidth}
+Now $B_{1\sigma}$ is a rim vertex and\\ $A_{s}$ is a hub vertex. In general $$B_{i\sigma}=A_{is}$$\\ $s$ denotes that $A$ is a hub vertex\\ $\sigma$ denotes the symmetry was applied to that vertex
+\column{0.5\textwidth}
+\begin{center}
+        \includegraphics[width=5cm]{images/Labeled hub-rim.png} 
+\end{center}
+\end{columns}
+\end{frame}
+
+% the differences in the figures after the proof has been applied
+\begin{frame}{$\sigma$ proof $\leftarrow$}
+The symmetry is applied:
+\begin{columns}
+\column{.5\textwidth}
+\begin{center}
+    $A:A_{i\sigma}=B_{ir}$\\\vspace{10pt}
+\includegraphics[width=3cm]{images/B_ir.png}\\
+The notation is $X_{ir}$ if the vertices were sent to the outer level
+\end{center}
+\column{.5\textwidth}
+\begin{center}
+    $B:B_{i\sigma}=A_{is}$\\\vspace{10pt}
+\includegraphics[width=3cm]{images/Labeled hub-rim.png}\\
+The notation is $X_{is}$ if the vertices were sent to the inner level
+\end{center}
+\end{columns}
+\end{frame}
+
+% what happens when this side of the proof is applied
+\begin{frame} {$\sigma$ proof $\leftarrow$}
+ This means that $\sigma ^2$ sends $A_0\to A_0$ and $A_1\to A_{rs}$. 
+ \begin{columns}
+ \column{.32\textwidth}
+ \begin{center}
+ \vspace{10pt}
+ $A_i$,\hspace{5pt}$B_i$\\
+  \vspace{15pt}
+     \includegraphics[width=3cm]{images/A_i.png}
+ \end{center}
+ \column{.32\textwidth}
+ \begin{center}\vspace{10pt}
+ $A_{ir}$,\hspace{5pt}$B_{i\sigma}$\\
+  \vspace{15pt}
+     \includegraphics[width=3cm]{images/A_ir.png}
+ \end{center}
+ \column{.32\textwidth}
+ \begin{center}
+ \vspace{10pt}
+   $A_{i(rs)}$,\hspace{5pt}$B_{i(\sigma^2)}$\\
+ \vspace{15pt}
+     \includegraphics[width=3cm]{images/A_irs.png}
+ \end{center}
+ \end{columns}
+\end{frame}
+
+% once we apply the symmetry, this is what we have
+\begin{frame} {$\sigma$ proof $\leftarrow$}
+This means that $\sigma ^2$ sends $A_0\to A_0$ and $A_1\to A_{rs}$. Thus $rs=\pm 1$.
+\begin{columns}
+ \column{.32\textwidth}
+ \begin{center}
+ \vspace{10pt}
+ $A_i$,\hspace{5pt}$B_i$\\
+  \vspace{15pt}
+     \includegraphics[width=3cm]{images/A_i.png}
+ \end{center}
+ \column{.32\textwidth}
+ \begin{center}\vspace{10pt}
+ $A_{ir}$,\hspace{5pt}$B_{i\sigma}$\\
+  \vspace{15pt}
+     \includegraphics[width=3cm]{images/A_ir.png}
+ \end{center}
+ \column{.32\textwidth}
+ \begin{center}
+ \vspace{10pt}
+   $A_{i(rs)}$,\hspace{5pt}$B_{i(\sigma^2)}$\\
+ \vspace{15pt}
+     \includegraphics[width=3cm]{images/A_irs.png}
+ \end{center}
+ \end{columns}
+\end{frame}
+
+% the variations obtained from the symmetries  
+\begin{frame} {$\sigma$ proof $\leftarrow$}
+This means that $\sigma ^2$ sends $A_0\to A_0$ and $A_1\to A_{rs}$. Thus $rs=\pm 1$. Now consider the spoke edges that join $$A_i \text{ to } B_i \text{ to } A_{i+a}$$ 
+\begin{columns}
+\column{0.5\textwidth}
+\begin{center}
+    \includegraphics[width=3cm]{images/A_spokes.png}
+\end{center}
+\column{0.5\textwidth}
+\end{columns}
+\end{frame}
+
+% showing what 'rs' is
+\begin{frame} {$\sigma$ proof $\leftarrow$}
+This means that $\sigma ^2$ sends $A_0\to A_0$ and $A_1\to A_{rs}$. Thus $rs=\pm 1$. Now consider the spoke edges that join $$A_i \text{ to } B_i \text{ to } A_{i+a}$$ $\sigma$
+ sends those vertices to $$B_{ri} \text{ to } A_{si} \text{ to } B_{ri+ra}$$ 
+ \begin{columns}
+\column{0.5\textwidth}
+\begin{center}
+    \includegraphics[width=2.7cm]{images/A_spokes.png}
+\end{center}
+\column{0.5\textwidth}
+\begin{center}
+    \includegraphics[width=2.7cm]{images/B_spokes.png}
+\end{center}
+\end{columns}
+%So the only way these can be joined by spoke edges is through 1 in-spoke and 1 out-spoke. 
+\end{frame}
+
+
+\begin{frame} {$\sigma$ proof $\leftarrow$}
+One of the following systems must hold for all $i\in \mathbb{Z}_n$:
+ \begin{enumerate}
+     \item $ri=si$; \hspace{33pt}  $ri+ra+a=si$
+     \item $ri+ra=si$; \hspace{10pt} $ri+a=si$
+     %this all come from manipulating the rim/hub/spokes equations in line with the last slide
+ \end{enumerate} 
+      %explain how these are found
+ \end{frame}
+
+
+\begin{frame} {$\sigma$ proof $\leftarrow$}
+One of the following systems must hold for all $i\in \mathbb{Z}_n$:
+ \begin{enumerate}
+     \item $ri=si$; \hspace{33pt}  $ri+ra+a=si$
+     \item $ri+ra=si$; \hspace{10pt} $ri+a=si$
+ \end{enumerate}
+ \vspace{5pt}
+ Let $i=1$ in system 1: it yields $ra=-a$ and $r^2=\pm 1$\\\vspace{10pt}
+ \begin{center}
+     Substitute $ri$ for $si$.\\  $ri+ra+a=si$\\  $si+ra+a=si$\\ $ra+a=0$\\ $ra=-a$\\
+If $ra=-a$, then $r^2=\pm 1$
+ \end{center}
+\end{frame}
+
+
+\begin{frame} {$\sigma$ proof $\leftarrow$}
+One of the following systems must hold for all $i\in \mathbb{Z}_n$:
+ \begin{enumerate}
+     \item $ri=si$; \hspace{33pt}  $ri+ra+a=si$
+     \item $ri+ra=si$; \hspace{10pt} $ri+a=si$
+ \end{enumerate}
+  \vspace{5pt}
+
+ Let $i=1$ in system 1: it yields $ra=-a$ and $r^2=\pm 1$\\
+ In system 2, it is followed that $ra=a$, so $a=(s-r)i$ for all $i$. \\
+ \vspace{10pt}
+ \begin{columns}
+ \column{0.5\textwidth}
+ \begin{center}
+           $ri+ra=si$\\$ri=si-ra$\\ Substitute $si-ra$  for $ri$\\  $(si-ra)+a=si$\\ $si-ra+a=si$\\$ra=a$.
+ \end{center}
+  \column{0.5\textwidth}
+ \begin{center}
+        $ri+a=si$\\\vspace{5pt}$a=si-ri$\\\vspace{5pt}$a=(s-r)i$.
+ \end{center}
+  \end{columns}
+\end{frame}
+
+
+\begin{frame} {$\sigma$ proof $\leftarrow$}
+One of the following systems must hold for all $i\in \mathbb{Z}_n$:
+ \begin{enumerate}
+     \item $ri=si$; \hspace{33pt}  $ri+ra+a=si$
+     \item $ri+ra=si$; \hspace{10pt} $ri+a=si$
+ \end{enumerate}
+  \vspace{5pt}
+
+ Let $i=1$ in system 1: it yields $ra=-a$ and $r^2=\pm 1$\\
+ In system 2, it is followed that $ra=a$, so $a=(s-r)i$ for all $i$. Letting $i=0$ shoes that $a=0$, which is not allowed.
+\end{frame}
+
+\begin{frame}{$\sigma$ proof $\rightarrow$ Summary}
+Assume: $r^2=\pm 1$ and $ra=\pm a$
+\vspace{10pt}
+\\Isomorphism of a rose window graph says: 
+$$A_i\to B_{-ir^{-1}},\hspace{7pt}B_i\to A_{-ir^{-1}}$$
+By using the assumption, the isomorphism can manipulated and become: $$A_i\to B_{ri},\hspace{7pt}B_i\to A_{ri}$$\\\vspace{10pt}
+This interchanges the hub and rim edges
+\end{frame}
+
+
+\begin{frame} {$\sigma$ proof $\leftarrow$ Summary}
+Assume: $\sigma$ interchanges rim and hub edges.\\ 
+\vspace{7pt}
+Choose a $n$ and $r$ such that $(r,n)$ is co-prime.\\
+\vspace{5pt}
+If $\sigma$ is applied to an vertex, its corresponding vertex: \\\hspace{7pt}Is sent outside, an r added: $A_{i\sigma}:B_1\to B_{1r}$\\
+\hspace{7pt}Is sent inside,  an s is added: $B_{i\sigma}:A_1\to A_{1s}$\\
+\vspace{5pt}
+By manipulating the edge equations, the subscripts ($i,a,r,s$) show that $r^2=\pm 1$ and $ra=\pm a$\\
+\vspace{7pt}
+This interchanges the hub and rim edges
+\end{frame}
+
+
+\section{Examples}
+\begin{frame}{Examples}
+\begin{itemize}
+\item From around campus
+\item Portions of a window
+\item How they hold with the Symmetry 
+\end{itemize} \end{frame}
+
+\begin{frame}{Examples from around Campus}
+\begin{columns}
+\column{.5\textwidth}
+\begin{center}
+    \includegraphics[width=5cm]{images/RW/full.png}
+\end{center}
+\column{.5\textwidth}
+\begin{center}
+    \includegraphics[width=5cm]{images/Chapel/Chapel RW circle.png}
+\end{center}
+\end{columns}
+\end{frame}
+
+\begin{frame}{Chapel Window}
+    \begin{columns}
+            \column{.5\textwidth}
+    \begin{center}
+            \includegraphics[width=4.5cm]{images/Chapel/Chapel RW circle.png}
+    \end{center}
+    \column{.5\textwidth}
+\begin{center}
+    \includegraphics[width=5cm]{images/Chapel/Chapel Colored.png}
+\end{center}
+    \end{columns}
+\end{frame}
+
+\begin{frame}{Chapel Window}
+    \begin{columns}
+            \column{.2\textwidth}
+    \begin{center}
+    \includegraphics[width=2cm]{images/Chapel/Chapel RW circle.png}
+        \end{center}
+     \column{.2\textwidth}
+    \begin{center}
+    \includegraphics[width=2cm]{images/Chapel/Chapel pic.stencil.png}\\\vspace{10pt}
+    \end{center}
+    \column{.2\textwidth}
+\begin{center}
+            \includegraphics[width=2cm]{images/Chapel/Chapel stencil.png}
+\end{center}
+\column{.2\textwidth}
+\begin{center}
+    \includegraphics[width=2cm]{images/Chapel/chapel RWG.png}\\\vspace{10pt}
+       \end{center}
+\column{.2\textwidth}
+\begin{center}    
+    \includegraphics[width=2cm]{images/Chapel/Chapel Colored.png}
+\end{center}
+    \end{columns}
+\end{frame}
+
+
+\begin{frame}{From Around Campus}
+ The rose window from All Saint's is comprised of 4 levels.
+ \vspace{10pt}
+\begin{columns}
+\column{0.2\textwidth}
+\begin{center}
+    \includegraphics[width=2cm]{images/RW/full.png}
+\end{center}
+\column{0.2\textwidth}
+\begin{center}
+    \includegraphics[width=2cm]{images/RW/large.pic.empty.png}
+\end{center}
+\column{0.2\textwidth}
+\begin{center}
+    \includegraphics[width=2cm]{images/RW/med.pic.empty.png}
+\end{center}
+\column{0.2\textwidth}
+\begin{center}
+    \includegraphics[width=2cm]{images/RW/RW small.png}
+\end{center}
+\column{0.2\textwidth}
+\begin{center}
+    \includegraphics[width=2cm]{images/RW/small-pic.png}
+\end{center}
+\end{columns}
+ \end{frame}
+    \begin{frame}{From Around Campus}
+\begin{columns}
+\column{0.5\textwidth}
+\begin{center}
+    \includegraphics[width=5cm]{images/RW/full.png}
+\end{center}
+\end{columns}
+\end{frame}
+
+\begin{frame}{Portions of a Window}
+\begin{center}
+    This is the outer most rose window graph of the Rose Window. It is denoted as $R_{12}(1,5)$
+\end{center}
+\begin{columns}
+\column{.3\textwidth}
+\begin{center}
+    \includegraphics[width=3cm]{images/RW/large.pic.empty.png}
+\end{center}
+\column{.3\textwidth}
+\begin{center}
+    \includegraphics[width=3cm]{images/RW/large.stacked.png}
+\end{center}
+\column{.3\textwidth}
+\begin{center}
+    \includegraphics[width=3cm]{images/RW/large.created.png}
+\end{center}
+\end{columns}
+\end{frame}
+
+\begin{frame}{Portions of a Window}
+\begin{columns}
+\column{0.5\textwidth}
+\begin{center}
+    \includegraphics[width=5cm]{images/RW/full.png}
+\end{center}
+\end{columns}
+\end{frame}
+
+\begin{frame}{Portions of a Window}
+\begin{center}
+    This is the second layer of the of the Rose Window. It is denoted as $R_{12}(1,5)$
+\end{center}
+\begin{columns}
+\column{.3\textwidth}
+\begin{center}
+    \includegraphics[width=3cm]{images/RW/med.pic.empty.png}
+\end{center}
+\column{.3\textwidth}
+\begin{center}
+    \includegraphics[width=3cm]{images/RW/med.stacked.png}
+\end{center}
+\column{.3\textwidth}
+\begin{center}
+    \includegraphics[width=3cm]{images/RW/med.created.png}
+\end{center}
+\end{columns}
+\end{frame}
+
+
+\begin{frame}{Portions of a Window}
+\begin{columns}
+\column{.5\textwidth}
+\begin{center}
+Rose Window from Chapel \\\vspace{10pt}
+    \includegraphics[width=4.5cm]{images/Chapel/Chapel stencil.png}
+\end{center}
+\column{.5\textwidth}
+\begin{center}
+Rose Window from All Saint's \\\vspace{10pt}
+    \includegraphics[width=5cm]{images/RW/large.created.png}
+\end{center}
+\end{columns}
+\end{frame}
+
+\begin{frame}{Showing they Hold}
+\begin{columns}
+\column{.5\textwidth}
+
+\begin{itemize}
+\item Rim: $A_i$ - $A_{i+1}$ (pink)
+\item In-Spoke: $A_i$ - $B_i$ (purple)
+\item Out-Spoke: $B_i$ - $A_{i+a}$ (blue)
+\item Hub: $B_i$ - $B_{i+r}$ (green)
+\item $\rho: A_i - A_{i+1}, \hspace{10pt} B_i - B_{i+1}$\\
+\item $\mu: A_i - A_{-i},\hspace{10pt} B_i - B_{-a-i} $ \\
+
+\end{itemize}
+    \column{.5\textwidth}
+    \begin{center}
+\includegraphics[width=5cm]{images/Chapel/Chapel Colored.png}
+$R_{12}(1,5)$ 
+\end{center}
+    \end{columns}
+\end{frame}
+
+
+\begin{frame}{Showing they Hold: $\sigma$}
+\begin{columns}
+\column{0.5\textwidth}
+\begin{center}
+    
+Isomorphism: $A_i\to B_{-ir^{-1}},\hspace{7pt}B_i\to A_{-ir^{-1}}$\\
+
+\includegraphics[width=5cm]{images/Chapel/chapel inverse.png}
+\end{center}
+
+\column{0.5\textwidth}
+\begin{center}
+By assumption: $A_i\to B_{ri},\hspace{7pt}B_i\to A_{ri}$\\
+\includegraphics[width=5cm]{images/Chapel/Chapel sigma.png}
+% as well 5 and 12 are co-prime
+\end{center} 
+\end{columns} 
+\end{frame}
+
+
+\begin{frame}{Portions of a Window}
+\begin{center}
+    This is the outer most rose window graph of the Rose Window. It is denoted as $R_{12}(1,5)$
+\end{center}
+\begin{columns}
+\column{.3\textwidth}
+\begin{center}
+    \includegraphics[width=3cm]{images/RW/large.pic.empty.png}
+\end{center}
+\column{.3\textwidth}
+\begin{center}
+    \includegraphics[width=3cm]{images/RW/large.stacked.png}
+\end{center}
+\column{.3\textwidth}
+\begin{center}
+    \includegraphics[width=3cm]{images/RW/large.created.png}
+\end{center}
+\end{columns}
+\end{frame}
+
+
+\begin{frame}{Showing they Hold}
+\begin{center}
+    The other layers of the rose window graph of the Rose Window follow suit in the sense that are denoted as $R_{12}(1,5)$
+\end{center}
+\begin{columns}
+\column{.5\textwidth}
+\begin{center}
+    \includegraphics[width=2.25cm]{images/RW/RW small.png}\\
+    \vspace{5pt}
+    \includegraphics[width=2.25cm]{images/RW/RW small inside.png}
+\end{center}
+\column{.5\textwidth}
+\begin{center}
+    \includegraphics[width=2.5cm]{images/RW/small-pic.png}\\
+    \vspace{5pt}
+    \includegraphics[width=2.5cm]{images/RW/small.created.png}
+\end{center}
+%The second most inner layer is not an interesting pattern
+\end{columns}
+\end{frame}
+
+
+\begin{frame}{Showing they Hold}
+    %The other layers of the rose window graph of the Rose Window follow suit in the sense that are denoted as $R_{12}(1,5)$
+\begin{columns}
+\column{.25\textwidth}
+\begin{center}
+    \includegraphics[width=2.5cm]{images/RW/large.pic.empty.png}\\
+    \vspace{5pt}
+    \includegraphics[width=2.5cm]{images/RW/large.created.png}
+\end{center}
+\column{.25\textwidth}
+\begin{center}
+    \includegraphics[width=2.5cm]{images/RW/med.pic.empty.png}\\
+    \vspace{5pt}
+    \includegraphics[width=2.5cm]{images/RW/med.created.png}
+\end{center}
+\column{.25\textwidth}
+\begin{center}
+    \includegraphics[width=2.5cm]{images/RW/RW small.png}\\
+    \vspace{5pt}
+    \includegraphics[width=2.5cm]{images/RW/RW small inside.png}
+\end{center}\column{.25\textwidth}
+\begin{center}
+    \includegraphics[width=2.5cm]{images/RW/small-pic.png}\\
+    \vspace{5pt}
+    \includegraphics[width=2.5cm]{images/RW/small.created.png}
+\end{center}
+%The second most inner layer is not an interesting pattern
+\end{columns}
+\end{frame}
+
+
+\begin{frame}{Rose Window}
+   % Now after seeing the rose window graphs all hold individually, lets see the whole effect
+\begin{columns}
+
+\column{.5\textwidth}
+\begin{center}
+    \includegraphics[width=5cm]{images/RW/full.png}\\
+\end{center}
+\column{.5\textwidth}
+\begin{center}
+    \includegraphics[width=5cm]{images/RW/full.og.png}\\
+
+\end{center}
+\end{columns}
+\end{frame}
+
+
+\begin{frame}{Rose Window}
+   % Now after seeing the rose window graphs all hold individually, lets see the whole effect
+%\end{center}
+\begin{columns}
+\column{.5\textwidth}
+\begin{center}
+       \includegraphics[width=5cm]{images/RW/full.stencil.png}
+
+\end{center}
+\column{.5\textwidth}
+\begin{center}
+        \includegraphics[width=5cm]{images/full stacked rose winode.png}
+\end{center}
+\end{columns}
+\end{frame}
+
+\begin{frame}{Rose Window}
+    \begin{center}
+        \includegraphics[width=6cm]{images/RW/full.stencil.png}
+    \end{center}
+\end{frame}
+
+\end{document}
